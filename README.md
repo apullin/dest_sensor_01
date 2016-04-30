@@ -11,11 +11,13 @@ The output of an example sensor located in an indoor environment in Berkeley, CA
 
 (Note: Plotting is accomiplished by using a webhook with the Particle Cloud services to push data to Librato, www.librato.com)
 
-Firmware has been tested on both a Particle Photon board and the Sparkfun Photon Redboard, which uses a Particle module.
+This firmware has been tested on both a [Particle Photon](https://docs.particle.io/datasheets/kits/#photon) board and the [Sparkfun Photon Redboard](https://www.sparkfun.com/products/13321), which uses a Particle module. No code changes are needed between the platforms.
 
 ## Wiring
 
 The code expects the PM2.5 sensor line (LOW = particle present) to be connected to pin D2, and the PM10 sensor to be connected to D3. These signals needs to be level shifted to 3.3v, to match the core voltage of the Particle board that you are using.
+
+Other input pins can be used, but the pin must support GPIO interrupt; see the Particle documentation.
 
 ## Building
 
